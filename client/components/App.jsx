@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-// import { fetchFruits } from '../actions'
+import { fetchRants } from '../actions/home'
 import AuthorView from './AuthorView'
 import RantView from './RantView'
 
@@ -13,9 +13,9 @@ export class App extends React.Component {
     fruits: []
   }
 
-  // componentDidMount () {
-  //   this.props.dispatch(fetchFruits())
-  // }
+  componentDidMount () {
+    this.props.dispatch(fetchRants())
+  }
 
   render () {
     return (
@@ -38,7 +38,7 @@ export class App extends React.Component {
 
 function mapStateToProps (globalState) {
   return {
-    fruits: globalState.fruits
+    rants: globalState.rants
   }
 }
 

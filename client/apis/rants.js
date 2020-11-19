@@ -10,7 +10,8 @@ const rootUrl = '/api/v1'
 // }
 
 export function getAllRantsAPI (){
-  return request.get('/api/v1/rants');
+  return request.get('/api/v1/rants')
+  .then(res => res.body)
 }
 
 export function addRantAPI (theState) {

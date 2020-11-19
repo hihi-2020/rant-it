@@ -6,7 +6,11 @@ const db = require('../db/rants');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-	db.getRants(res.body).catch((err) => {
+	db.getAllRants()
+		.then(rantsArr => {
+			res.json(rantsArr)
+		})
+	.catch((err) => {
 		console.log(err);
 		res.status(500).json({ message: 'Resquest went wrong' });
 	});
