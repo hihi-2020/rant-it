@@ -6,6 +6,7 @@ import AuthorView from './AuthorView'
 import RantView from './RantView'
 
 import EnterName from './EnterName'
+import CreateRant from './CreateRant'
 
 export class App extends React.Component {
   state = {
@@ -20,6 +21,14 @@ export class App extends React.Component {
     return (
       <div className='app'>
         <EnterName />
+        <h1>Fullstack Boilerplate - with Fruits!</h1>
+        <ul>
+          {this.props.fruits.map(fruit => (
+            <li key={fruit}>{fruit}</li>
+          ))}
+
+          <CreateRant/>
+        </ul>
       </div>
     )
   }
