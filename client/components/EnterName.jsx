@@ -5,3 +5,39 @@
 // big div that is fixed position, clear, then another div like a flexboc thats smack bang in the middle of the page and conditionally renders over the top of home
 
 // Bren seems like he has lots of knowledge on how to do this
+
+import React from 'react'
+import { connect } from 'react-redux'
+
+import { setUser } from '../actions/userName'
+
+class EnterName extends React.Component {
+  state = {
+    nameInput: ""
+  }
+  
+  handleChange = (event) => {
+    this.setState({
+      nameInput: event.target.value
+    })
+  }
+
+  handleClick = () => {
+    this.props.dispatch(setUser(this.state.nameInput))
+  }
+
+  // need a function to handle the cross button for hiding the name input
+
+  render() {
+    return (
+      <div>
+        <h2>Enter your hackerName</h2>
+        <input type="text" onChange={this.handleChange} />
+        <button onClick={this.handleClick} >Continue ranting</button>
+        <button>x</button>
+      </div>
+    )
+  }
+}
+
+export default connect()(EnterName)
