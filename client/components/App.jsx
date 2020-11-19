@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { fetchFruits } from '../actions'
+// import { fetchFruits } from '../actions'
 import AuthorView from './AuthorView'
 import RantView from './RantView'
 
@@ -23,12 +23,14 @@ export class App extends React.Component {
         <EnterName />
         <h1>Fullstack Boilerplate - with Fruits!</h1>
         <ul>
-          {this.props.fruits.map(fruit => (
+          {/* {this.props.fruits.map(fruit => (
             <li key={fruit}>{fruit}</li>
-          ))}
+          ))} */}
 
           <CreateRant/>
         </ul>
+        <RantView />
+        {/* <AuthorView /> */}
       </div>
     )
   }

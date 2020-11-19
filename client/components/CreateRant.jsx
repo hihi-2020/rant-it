@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-import {addRant} from '../apis/rants'
+import {addRantAPI} from '../apis/rants'
 import {connect} from 'react-redux'
 
 class CreateRant extends React.Component{
@@ -23,7 +23,7 @@ class CreateRant extends React.Component{
   handleSubmit = event => {
     console.log(this.state)
     event.preventDefault()
-    addRant(this.state)
+    addRantAPI(this.state)
     .then(()=>{
       this.setState({
         rant:'',

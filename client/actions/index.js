@@ -1,7 +1,6 @@
 // import { getRants } from '../apis/fruits'
-import { getFruits } from '../apis/rants'
+// import { getFruits } from '../apis/rants'
 
-export const SET_AUTHOR = 'SET_AUTHOR'
 
 
 
@@ -14,14 +13,3 @@ export const SET_AUTHOR = 'SET_AUTHOR'
 //       })
 //   }
 // }
-
-export function setAuthor (author) {
-  return {
-    type: SET_AUTHOR,
-    author
-  }
-
-
-}
-
-
