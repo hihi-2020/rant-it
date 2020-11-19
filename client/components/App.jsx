@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { fetchFruits } from '../actions'
+// import { fetchFruits } from '../actions'
 import AuthorView from './AuthorView'
 import RantView from './RantView'
 
