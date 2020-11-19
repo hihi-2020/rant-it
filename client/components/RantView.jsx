@@ -9,7 +9,9 @@ const RantView = (props) => {
     <div>
 
       <li>
-        
+      {this.props.rant.map(rant => (
+            <li key={rant}>{rant}</li>
+          ))}
       </li>
     </div>
 
