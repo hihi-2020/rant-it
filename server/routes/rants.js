@@ -12,9 +12,10 @@ router.get('/', (req, res) => {
 		})
 	.catch((err) => {
 		console.log(err);
-		res.status(500).json({ message: 'Resquest went wrong' });
+		res.status(500).json({ message: 'Request went wrong' });
 	});
 });
+
 
 router.post('/', (req, res) => {
 	db.addRant(req.body)

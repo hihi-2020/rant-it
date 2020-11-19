@@ -1,11 +1,11 @@
-import { SET_AUTHOR } from '../actions'
+import { GET_RANTS } from '../actions'
 
 const initialState = []
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_FRUITS:
-      return action.fruits
+    case GET_RANTS:
+      return [...state]
     default:
       return state
   }

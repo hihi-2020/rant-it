@@ -1,32 +1,34 @@
 // Buddah_Chicken & DeathEagle
 import React from 'react'
-// import {getAllRantsAPI} from '../apis/rants'
-import rants from '../../server/db/seeds/rants'
 import { connect } from 'react-redux'
+import { fetchRants } from '../actions/getRants'
 
-
-
+// const rants = 
 
 const RantView = (props) => {
-  const rant = props.rant
-  //   state = {
-  //     rant:'',
-  //     author:'',
-  // }
-
-
+  console.log(props)
   return (
     <div>
 
-      <ul>
-      {/* {rant.map(rant => (
+      <li>
+      {props.rants.map(rant => (
             <li key={rant}>{rant}</li>
-          ))} */}
-      </ul>
+          ))}
+      </li>
     </div>
 
   )
 }
 
-// reducer with empty state [], map state to props with 
-export default RantView
+
+function mapStateToProps (globalState) {
+  fetchRants()
+  return {
+    userName: globalState.userName,
+    rants: globalState.rantView
+  }
+}
+
+export default connect (
+  mapStateToProps
+)(RantView)
