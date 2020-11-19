@@ -1,12 +1,13 @@
 // Buddah_Chicken & DeathEagle
-
-
-// BuddahChucken & DeathEagle
 import React from 'react'
+import {connect} from 'react-redux'
 
+import rants from '../../server/db/seeds/rants'
 
 
 const AuthorView = (props) => {
+
+  const {rant} = rant
 
   return (
     <div>
