@@ -1,4 +1,5 @@
 // import { getRants } from '../apis/fruits'
+import { getFruits } from '../apis/rants'
 
 export const SET_AUTHOR = 'SET_AUTHOR'
 
