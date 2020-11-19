@@ -29,8 +29,8 @@ export class App extends React.Component {
 
           <CreateRant/>
         </ul>
-        {/* <RantView />
-        <AuthorView /> */}
+        <RantView />
+        {/* <AuthorView /> */}
       </div>
     )
   }

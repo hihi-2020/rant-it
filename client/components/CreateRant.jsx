@@ -1,25 +1,29 @@
 
 import React from 'react'
 
-import {addRant} from '../apis/rants'
+import {addRantAPI} from '../apis/rants'
+import {connect} from 'react-redux'
 
-export default class CreateRant extends React.Component{
+class CreateRant extends React.Component{
   state = {
     rant:'',
-    author:''//from global store
+    author:this.props.userName,//from global store
+    title:''
   }
 
   handleChange = event =>{
-    console.log(event.target.value)
+ 
     this.setState({
-      rant:event.target.value,
-      author: this.props.state
+      [event.target.name]:event.target.value,
+      author: this.props.userName,
+      [event.target.name]:event.target.value
     })
   }
 
   handleSubmit = event => {
+    console.log(this.state)
     event.preventDefault()
-    addRant(this.state)
+    addRantAPI(this.state)
     .then(()=>{
       this.setState({
         rant:'',
@@ -32,8 +36,9 @@ render(){
   return(
     <>
     <form>
-      <label>rant</label>
-      <textarea name="Rant" onChange={this.handleChange} value={this.state.rant}></textarea>
+      
+      <input type="text" name="title" placeholder='Enter your rant title here' onChange={this.handleChange} value={this.state.title}/>
+      <textarea name="rant" onChange={this.handleChange} value={this.state.rant} placeholder='Rant awayyyy'></textarea>
       <button onClick={this.handleSubmit}>Rant-it</button>
 
     </form>
@@ -42,3 +47,11 @@ render(){
 }
 
 }
+
+function mapStateToProps (globalState) {
+  return {
+    userName: globalState.userName
+  }
+}
+
+export default connect(mapStateToProps)(CreateRant)
