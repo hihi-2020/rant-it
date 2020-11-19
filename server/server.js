@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 
-const fruitRoutes = require('./routes/fruits')
+//const fruitRoutes = require('./routes/fruits')
 const rantRoutes = require ('./routes/rants')
 
 const server = express()

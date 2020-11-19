@@ -13,9 +13,9 @@ export class App extends React.Component {
     fruits: []
   }
 
-  componentDidMount () {
-    this.props.dispatch(fetchFruits())
-  }
+  // componentDidMount () {
+  //   this.props.dispatch(fetchFruits())
+  // }
 
   render () {
     return (

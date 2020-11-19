@@ -11,9 +11,13 @@ export function getFruits () {
 
 
 export function addRant (theState) {
+  console.log('we got to the api file!!')
+  console.log(new Date().toUTCString(+13))
   const newRant = {
     rant:theState.rant,
-    author:theState.author
+    author:theState.author,
+    title:theState.title,
+    date: new Date().toUTCString(+13)
 
     
   }
