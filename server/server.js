@@ -3,7 +3,6 @@ const path = require('path')
 
 // const fruitRoutes = require('./routes/fruits')
 const rantsRoutes = require('./routes/rants')
-const rantRoutes = require ('./routes/rants')
 
 const server = express()
 
