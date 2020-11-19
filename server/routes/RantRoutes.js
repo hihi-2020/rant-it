@@ -1,20 +1,21 @@
 const express = require('express')
 
-const db = require('../db/fruits')
 
 const router = express.Router()
 
+
 router.get('/', (req, res) => {
-  db.getFruits()
+  db.getAllRants()
     .then(results => {
-      res.json({ fruits: results.map(fruit => fruit.name) })
+      res.json({ rants: results.map(rant => rant.title) })
       return null
     })
     .catch(err => {
       console.log(err)
-      res.status(500).json({ message: 'Somthing went wrong' })
+      res.status(500).json({ message: "You've been HACKED" })
     })
 })
+
 
 router.get('/:author', (req, res) => {
   db.getAuthor()
@@ -27,5 +28,6 @@ router.get('/:author', (req, res) => {
       res.status(500).json({ message: "You've been HACKED" })
     })
 })
+
 
 module.exports = router
