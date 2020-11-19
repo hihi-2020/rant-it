@@ -5,6 +5,8 @@ import { fetchFruits } from '../actions'
 import AuthorView from './AuthorView'
 import RantView from './RantView'
 
+import EnterName from './EnterName'
+
 export class App extends React.Component {
   state = {
     fruits: []
@@ -17,14 +19,7 @@ export class App extends React.Component {
   render () {
     return (
       <div className='app'>
-        <h1>Fullstack Flapjacks - with Syrup!</h1>
-        <ul>
-          {this.props.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-          <RantView />
-          <AuthorView />
-        </ul>
+        <EnterName />
       </div>
     )
   }
