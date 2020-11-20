@@ -11,8 +11,8 @@ const AuthorView = (props) => {
 
   return (
     <div>
-      {this.props.author}
       <li>
+      {this.props.author}
       {this.props.author.rant.map(rant => (
             <li key={rant}>{rant}</li>
       ))}
