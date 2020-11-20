@@ -39,11 +39,14 @@ class CreateRant extends React.Component{
 render(){
   return(
     <>
-    <form>
+    <img src="./RANT-IT_DARK (1).svg"/>
+    <form className = "form">
       
-      <input type="text" name="title" placeholder='Enter your rant title here' onChange={this.handleChange} value={this.state.title}/>
-      <textarea name="rant" onChange={this.handleChange} value={this.state.rant} placeholder='Rant awayyyy'></textarea>
-      <button onClick={this.handleSubmit}>Rant-it</button>
+      <input className = 'Title' type="text" name="title" placeholder='Enter your rant title here' onChange={this.handleChange} value={this.state.title}/>
+      
+      <textarea className = 'Rant' name="rant" onChange={this.handleChange} value={this.state.rant} placeholder='Rant awayyyy'></textarea>
+      
+      <button className ='botton' onClick={this.handleSubmit}>Rant-it</button>
 
     </form>
     </>

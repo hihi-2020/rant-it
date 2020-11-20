@@ -10,18 +10,21 @@ import AuthorView from './AuthorView';
 
 const Home = (props) => {
 	return (
-    <div>           
+    <div className ="HomeDisplayPage">           
+		<img src="./RANT-IT_DARK (1).svg"/>
     <Link to={'/rant-it'}>Write a rant</Link>
       <Route  path={`/author/:author`} component={AuthorView}/>
 			{props.rants.reverse().map((rant) => {
         
+
 				return (
 					<div key={rant.id}>
 						<h3>{rant.title}</h3>
-						<p>{rant.rant}</p>
+						<p className = "singleRant">{rant.rant}</p>
 						<p>
-							<Link to={`/author/${rant.author}`}  > {rant.author}</Link>
+							<Link className="rantAuthor" to={`/author/${rant.author}`}  > {rant.author}</Link>
    
+							{/* <a c> {rant.author}</a> */}
 						</p>
 					</div>
 				);

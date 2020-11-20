@@ -32,11 +32,13 @@ class EnterName extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className = 'entername'>
+        <img src="./RANT-IT_DARK (1).svg"/>
         <h2>Enter your hackerName</h2>
-        <input type="text" onChange={this.handleChange} />
-        <button onClick={this.handleClick} >Continue ranting</button>
-        <button>x</button>
+        <input className ='Title' type="text" onChange={this.handleChange} />
+        <br/>
+        <button className = 'botton' onClick={this.handleClick} >Continue ranting</button>
+        {/* <button>x</button> */}
       </div>
     )
   }

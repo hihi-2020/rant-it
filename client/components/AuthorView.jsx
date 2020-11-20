@@ -12,6 +12,7 @@ const AuthorView = (props) => {
 
   return (
     <div>
+      <img src="./RANT-IT_DARK (1).svg"/>
     <Link to={'/'}>Home!</Link>
       <h1>Rants by: {props.match.params.author}</h1>
 
