@@ -13,8 +13,7 @@ const Home = (props) => {
 
       <ul>
       {props.rants.map(rant => (
-            <li key={rant.id}>{rant.title} by {rant.author}</li>
-
+            <li key={rant.id}>{rant.title} by </li>
           ))}
       </ul>
     </div>
