@@ -1,36 +1,34 @@
 // Logoloco & Vulpes/Vulpes
-import React from 'react'
-import { connect } from 'react-redux'
-import { fetchRants } from '../actions/home'
+import React from 'react';
+import { connect } from 'react-redux';
+import { fetchRants } from '../actions/home';
 
-// const rants = 
+// const rants =
 
 const Home = (props) => {
-  console.log(props)
-  console.log(props.rants + "/////////////////")
-  return (
-      <div>
+	return (
+		<div>
+			{props.rants.map((rant) => {
+				return (
+					<div key={rant.id}>
+						<h3>{rant.title}</h3>
+						<p>{rant.rant}</p>
+						<p>
+							<a> {rant.author}</a>
+						</p>
+					</div>
+				);
+			})}
+		</div>
+	);
+};
 
-      <ul>
-      {props.rants.map(rant => (
-            <li key={rant.id}>{rant.title} by {rant.author}</li>
-
-          ))}
-      </ul>
-    </div>
-
-  )
+function mapStateToProps(globalState) {
+	fetchRants();
+	return {
+		userName: globalState.userName,
+		rants: globalState.home,
+	};
 }
 
-
-function mapStateToProps (globalState) {
-  fetchRants()
-  return {
-    userName: globalState.userName,
-    rants: globalState.home
-  }
-}
-
-export default connect (
-  mapStateToProps
-)(Home)
+export default connect(mapStateToProps)(Home);
