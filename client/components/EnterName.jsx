@@ -8,6 +8,7 @@
 
 import React from 'react'
 import { connect } from 'react-redux'
+import {Link, useHistory} from "react-router-dom"
 
 import { setUser } from '../actions/userName'
 
@@ -24,6 +25,7 @@ class EnterName extends React.Component {
 
   handleClick = () => {
     this.props.dispatch(setUser(this.state.nameInput))
+    this.props.history.push('/home')
   }
 
   // need a function to handle the cross button for hiding the name input
