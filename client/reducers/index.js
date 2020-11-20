@@ -2,10 +2,10 @@ import { combineReducers } from 'redux'
 
 
 // import fruits from './fruits'
-import rantView from './rantView'
+import rants from './rants'
 import userName from './userName'
 
 export default combineReducers({
   userName,
-  rantView,
+  rants,
 })

@@ -5,7 +5,10 @@ const initialState = []
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_RANTS:
-      return [...state]
+        console.log(action.rants)
+        console.log(action)
+      return action.rants
+      
     default:
       return state
   }

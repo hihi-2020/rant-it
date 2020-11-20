@@ -13,7 +13,9 @@ export const getRants = (rants) => {
 
 export const fetchRants = () => {
 return (dispatch) => {
-    getAllRantsAPI().then(rants => {
+    return getAllRantsAPI()
+    .then(rants => {
+      console.log(rants)
       dispatch(getRants(rants))
     })
     .catch((err) => console.log(err))

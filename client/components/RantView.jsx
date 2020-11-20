@@ -3,10 +3,10 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { fetchRants } from '../actions/getRants'
 
-// const rants = 
+
 
 const RantView = (props) => {
-  console.log(props)
+  // console.log(props)
   return (
     <div>
 
@@ -22,10 +22,9 @@ const RantView = (props) => {
 
 
 function mapStateToProps (globalState) {
-  fetchRants()
   return {
     userName: globalState.userName,
-    rants: globalState.rantView
+    rants: globalState.rants
   }
 }
 

@@ -7,15 +7,19 @@ import RantView from './RantView'
 
 import EnterName from './EnterName'
 import CreateRant from './CreateRant'
+import { fetchRants } from '../actions/getRants'
 
 export class App extends React.Component {
   state = {
-    fruits: []
+    rants: []
   }
 
-  // componentDidMount () {
-  //   this.props.dispatch(fetchFruits())
-  // }
+  componentDidMount = () => {
+    this.props.dispatch(fetchRants())
+    // .then()
+    
+    console.log(this.props)
+   }
 
   render () {
     return (
@@ -38,7 +42,7 @@ export class App extends React.Component {
 
 function mapStateToProps (globalState) {
   return {
-    fruits: globalState.fruits
+    rants: globalState.rantView
   }
 }
 
