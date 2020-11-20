@@ -2,19 +2,26 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchRants } from '../actions/home';
+import { Link, Route } from 'react-router-dom'
+import AuthorView from './AuthorView';
+
 
 // const rants =
 
 const Home = (props) => {
 	return (
-		<div>
-			{props.rants.map((rant) => {
+    <div>           
+    <Link to={'/rant-it'}>Write a rant</Link>
+      <Route  path={`/author/:author`} component={AuthorView}/>
+			{props.rants.reverse().map((rant) => {
+        
 				return (
 					<div key={rant.id}>
 						<h3>{rant.title}</h3>
 						<p>{rant.rant}</p>
 						<p>
-							<a> {rant.author}</a>
+							<Link to={`/author/${rant.author}`}  > {rant.author}</Link>
+   
 						</p>
 					</div>
 				);

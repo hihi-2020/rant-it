@@ -3,6 +3,7 @@ import React from 'react'
 
 import {addRantAPI} from '../apis/rants'
 import {connect} from 'react-redux'
+import { fetchRants } from '../actions/home'
 
 class CreateRant extends React.Component{
   state = {
@@ -26,10 +27,12 @@ class CreateRant extends React.Component{
     event.preventDefault()
     addRantAPI(this.state)
     .then(()=>{
+      this.props.dispatch(fetchRants())
       this.setState({
         rant:'',
         author:''
       })
+      this.props.history.push('/home')
     })
   }
 
