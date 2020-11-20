@@ -5,6 +5,7 @@ import { fetchRants } from '../actions/home'
 import AuthorView from './AuthorView'
 import RantView from './RantView'
 import Home from './Home'
+import { Link, Route } from 'react-router-dom'
 
 import EnterName from './EnterName'
 import CreateRant from './CreateRant'
@@ -21,19 +22,10 @@ export class App extends React.Component {
   render () {
     return (
       <div className='app'>
-        <img src="./RANT-IT_DARK.svg"/> 
-        <EnterName />
-        <Home />
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
-          {/* {this.props.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))} */}
-
-          <CreateRant/>
-        </ul>
-        {/* <RantView /> */}
-        {/* <AuthorView /> */}
+        <Route exact path='/' component={EnterName}/>
+        <Route exact path='/home' component={Home}/>
+        <Route  exact path={`/author/:author`} component={AuthorView}/>
+        <Route exact path={'/rant-it'} component={CreateRant}/>
       </div>
     )
   }
