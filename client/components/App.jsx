@@ -21,15 +21,16 @@ export class App extends React.Component {
   render () {
     return (
       <div className='app'>
+        <img src="./RANT-IT_DARK (1).svg"/>
         <EnterName />
+          <CreateRant/>
         <Home />
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
+        {/* <h1>Fullstack Boilerplate - with Fruits!</h1> */}
         <ul>
           {/* {this.props.fruits.map(fruit => (
             <li key={fruit}>{fruit}</li>
           ))} */}
 
-          <CreateRant/>
         </ul>
         {/* <RantView /> */}
         {/* <AuthorView /> */}

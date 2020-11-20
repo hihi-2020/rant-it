@@ -7,14 +7,14 @@ import { fetchRants } from '../actions/home';
 
 const Home = (props) => {
 	return (
-		<div>
+		<div className ="HomeDisplayPage">
 			{props.rants.map((rant) => {
 				return (
 					<div key={rant.id}>
 						<h3>{rant.title}</h3>
-						<p>{rant.rant}</p>
+						<p className = "singleRant">{rant.rant}</p>
 						<p>
-							<a> {rant.author}</a>
+							<a className = "rantAuthor"> {rant.author}</a>
 						</p>
 					</div>
 				);
