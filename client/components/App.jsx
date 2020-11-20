@@ -21,6 +21,7 @@ export class App extends React.Component {
   render () {
     return (
       <div className='app'>
+        <img src="./RANT-IT_DARK.svg"/> 
         <EnterName />
         <Home />
         <h1>Fullstack Boilerplate - with Fruits!</h1>
