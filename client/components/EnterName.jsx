@@ -34,10 +34,10 @@ class EnterName extends React.Component {
     return (
       <div className = 'entername'>
         <img src="./RANT-IT_DARK (1).svg"/>
-        <h2>Enter your hackerName</h2>
+        <h2>Enter your Hacker Name</h2>
         <input className ='Title' type="text" onChange={this.handleChange} />
         <br/>
-        <button className = 'botton' onClick={this.handleClick} >Continue ranting</button>
+        <button className = 'botton' onClick={this.handleClick} >Next</button>
         {/* <button>x</button> */}
       </div>
     )

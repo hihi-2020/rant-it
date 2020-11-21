@@ -1,5 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
+  background:#e8e8e8;
+
 }
 
 .Title{
@@ -19,15 +21,14 @@ body {
   display: block; 
 }
 
-
 .form{
 margin: auto;
 width: 500px;
 }
 
 .botton{
-  height: 43px;
-  width: 207px;
+  height: 35px;
+  width: 100px;
   border-radius: 0px;
   /* background: #13A71D; */
   background: #222831;
@@ -37,11 +38,11 @@ width: 500px;
   border: none;
   margin: auto;
   margin-top: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   font-weight: bold;
-
+  text-align: center;
+ float: right;
 }
-
 
 h2, h3{
   text-align: center;
@@ -68,6 +69,13 @@ h2, h3{
 img{
   width: 50vh;
   margin: auto ;
+  margin-top: 70px;
+  margin-bottom: 50px;
   display: block;
   align-items: center;
+}
+
+link{
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
 }
