@@ -1,35 +1,68 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  background:#e8e8e8;
-
+  font-family: "Roboto", sans-serif;
+  background: #e8e8e8;
 }
 
-.Title{
+.Title {
   outline: none;
   width: 500px;
   height: 30px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #000000;
   box-sizing: border-box;
-  margin-bottom : 5px;
-
+  margin-bottom: 5px;
 }
 
-.Rant{
+.Rant {
   width: 500px;
   height: 200px;
-  display: block; 
+  display: block;
+  font-size: 2vh;
 }
 
-.form{
-margin: auto;
-width: 500px;
+.singleRant {
+  text-align: left;
+  /* width: 90px; */
+  color: #e8e8e8;
+  font-size: 2vh;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  line-height: 25pt;
 }
 
-.botton{
+/* //title of the post */
+h3 {
+  font-size: 2vh;
+  color: #f12b59;
+  padding-left: 10px;
+}
+
+.homeAllRantPosts {
+  text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+/* 
+.homeDisplayPage {
+  /* border-color: #222831;
+  border-style: solid; */
+/* } */
+.writeRantLink,
+.homeLink {
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 300;
+  font-size: x-large;
+  color: #f12b59;
+}
+.form {
+  margin: auto;
+  width: 500px;
+}
+
+.botton {
   height: 35px;
   width: 100px;
-  border-radius: 0px;
   /* background: #13A71D; */
   background: #222831;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
@@ -41,41 +74,69 @@ width: 500px;
   border-radius: 20px;
   font-weight: bold;
   text-align: center;
- float: right;
+  float: right;
 }
 
-h2, h3{
+h2 {
   text-align: center;
 }
 
-.HomeDisplayPage{
-  text-align: center;
+.rantAuthor {
+  font-size: 2vh;
+  color: #e8e8e8;
+  float: right;
+}
+em a:link {
+  color: #f12b59 !important;
+  text-decoration: none !important;
+  margin-bottom: 25px;
+  margin-top: 20px;
 }
 
-
-.rantAuthor{
-  font-size : 20px;
-  text-decoration:none;
-  color: inherit;
-  
+a:visited {
+  text-decoration: none;
+  color: #f12b59;
+  font-weight: 300;
 }
 
-.entername{
+a:link,
+a:hover,
+a:active {
+  text-decoration: underline;
+  color: #f12b59;
+  font-weight: 300;
+}
+
+#rantAuthor {
+  color: #e8e8e8;
+  margin-bottom: 25px;
+  text-decoration: none;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+.entername {
   margin: auto;
   width: 500px;
   margin-bottom: 20px;
 }
 
-img{
+img {
   width: 50vh;
-  margin: auto ;
+  margin: auto;
   margin-top: 70px;
   margin-bottom: 50px;
   display: block;
   align-items: center;
 }
 
-link{
+link {
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+div .homeAllRantPosts {
+  background-color: #222831;
+  padding: 20px;
+  margin-bottom: 23px;
+  border-radius: 15px;
 }
