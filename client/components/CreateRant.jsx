@@ -44,7 +44,7 @@ render(){
       
       <input className = 'Title' type="text" name="title" placeholder='Enter your rant title here' onChange={this.handleChange} value={this.state.title}/>
       
-      <textarea className = 'Rant' name="rant" onChange={this.handleChange} value={this.state.rant} placeholder='Rant awayyyy'></textarea>
+      <textarea className = 'Rant' name="rant" onChange={this.handleChange} value={this.state.rant} placeholder='Rant away'></textarea>
       
       <button className ='botton' onClick={this.handleSubmit}>Rant-it</button>
 
