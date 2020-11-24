@@ -26,7 +26,7 @@ export class App extends React.Component {
         <Route exact path='/home' component={Home}/>
         <Route  exact path={`/author/:author`} component={AuthorView}/>
         <Route exact path={'/rant-it'} component={CreateRant}/>
-git pu      </div>
+     </div>
     )
   }
 }
