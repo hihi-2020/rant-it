@@ -1,8 +1,8 @@
 exports.up = function (knex) {
   return knex.schema.createTable('rants', table => {
     table.increments('id')
-    table.string('title')
-    table.string('rant')
+    table.text('title')
+    table.text('rant')
     table.string('author')
     table.integer('date')
 
